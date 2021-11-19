@@ -459,6 +459,35 @@ a:hover {
     font-size: 3.5rem;
 }
 
+.player_nav-buttons .nav-loop {
+
+
+    font-size: 2.5rem;
+}
+
+.looped {
+    
+}
+
+.player_nav-buttons .nav-time {
+
+    display: inline-block;
+
+    z-index: 1;
+
+    background-color: rgb(24, 24, 24, 0.8);
+
+    padding: 1rem 0.7rem 1rem;
+
+
+    border-radius: 50%;
+}
+
+.nav_time-spin {    
+}
+
+
+
 
 .btn {
     transition: all 200ms ease-in-out;
@@ -484,12 +513,41 @@ a:hover {
     width: 0%;
     transition: width .1s linear, box-shadow 1s linear;
     z-index: 5;
+
+    position: relative;
+}
+
+.progress_thumb {
+    border-radius: 50%;
+    position: absolute;
+
+    top: 50%;
+    right: 0;
+
+    transform: translateX(-50%);
+
+
+    width: 3rem;
+    height: 3rem;
+
+    opacity: 0;
+
+    background-color: #131313;
+
+    transition: opacity .4s linear;
+
+    display: none;
+
 }
 
 .player_info {
     padding: 0 10rem;
     text-align: center;
+
+    transition: width .2s ease-in-out;
+
 }
+
 
 .player_text {
     font-size: 2rem;
@@ -497,7 +555,14 @@ a:hover {
     background-color: rgba(24, 24, 24, 0.8);
     border-radius: 5rem;
     padding: 1rem;
+
+    box-sizing: border-box;
+
+
+    transition: width .2s ease-in-out;
 }
+
+
 
 .music {
     display: none;
@@ -577,6 +642,12 @@ a:hover {
 
   }
   
+  @keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+  }
+
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -587,7 +658,11 @@ a:hover {
     cursor: pointer;
 
     transition: all .2s;
+
+    animation: spinner .7s linear infinite;
   }
+
+
 
   .slider::-webkit-slider-thumb:hover {
     -webkit-appearance: none;

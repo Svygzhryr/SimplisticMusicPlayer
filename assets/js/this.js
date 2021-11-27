@@ -121,10 +121,7 @@ function updateProgress(e) {
             nextSong();
         }
 
-    }
-
-
-}
+ }
 
 function setProgress(e) {
     const width = this.clientWidth

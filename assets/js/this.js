@@ -1,3 +1,5 @@
+"use strict";
+
 // получаю плеер
 const activeImg = document.querySelector('.preview_img');
 const prevBtn   = document.querySelector('.nav-prev');
@@ -112,8 +114,10 @@ function updateProgress(e) {
         pThumb.style.opacity = '0';
     }
 
-    if (progressPercent >= 100 && loopBtn.classList.contains('looped')) {
+    if (progressPercent >= 100) {
         
+        if (loopBtn.classList.contains('looped')) {
+
             track.currentTime = 0;
 
             playSong();
@@ -121,7 +125,11 @@ function updateProgress(e) {
             nextSong();
         }
 
- }
+    }
+
+
+}
+
 
 function setProgress(e) {
     const width = this.clientWidth

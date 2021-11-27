@@ -1,5 +1,3 @@
-"use strict";
-
 // получаю плеер
 const activeImg = document.querySelector('.preview_img');
 const prevBtn   = document.querySelector('.nav-prev');
@@ -22,7 +20,7 @@ console.log(activeImg, prevBtn, startBtn, stopBtn, nextBtn, bar, info); */
 
 // массив песенок
 
-const songs = ['Redbone - DontCry', 'RHODAMINE - House of the Addict', 'Imagine Dragons - Enemy', 'Bones - Sesh', 'UnKnown - BigTown']
+const songs = ['Redbone - DontCry', 'Jockel der Gartenteichspringbrunnen', 'Imagine Dragons - Enemy', 'Bones - Sesh', 'UnKnown - BigTown']
 
 let songIndex = 0;
 
@@ -105,13 +103,13 @@ function updateProgress(e) {
     if (progressPercent > 1) { 
         progress.style.boxShadow = "0px 0px 10px 3.5px rgba(19, 19, 19, 0.82)";
     } else {
-        progress.style.boxShadow = 'none';
+        progress.style.boxShadow = 'none';       
     }
 
     if (progressPercent > 3) { 
         pThumb.style.opacity = "1";
     } else {
-        pThumb.style.opacity = '0';
+        pThumb.style.opacity = '0';       
     }
 
     if (progressPercent >= 100) {
@@ -129,7 +127,6 @@ function updateProgress(e) {
 
 
 }
-
 
 function setProgress(e) {
     const width = this.clientWidth

@@ -705,6 +705,10 @@ a:hover {
         max-width: 35rem;
     }
 
+    .player_nav-buttons {
+        padding: 0 5rem;
+     }
+
     .player_text {
         text-overflow: clip;
         white-space: pre-line;

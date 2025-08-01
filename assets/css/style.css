@@ -441,6 +441,7 @@ a:hover {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
+    justify-items: center;
 }
 
 .player_nav-buttons button {
@@ -448,6 +449,13 @@ a:hover {
     border: none;
     color: #f3f3f3;
     font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    min-width: 50px;
+    min-height: 50px;
 }
 
 .player_nav-buttons .nav-prev {
@@ -462,11 +470,11 @@ a:hover {
 .player_nav-buttons .nav-loop {
 
 
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
 
-.looped {
-    
+button.looped {
+    color: black;
 }
 
 .player_nav-buttons .nav-time {

@@ -39,8 +39,7 @@ function loadSong(song) {
 function playSong() {
     track.classList.add('play');
 
-    playBtn.querySelector('i.fas').classList.remove('fa-play');
-    playBtn.querySelector('i.fas').classList.add('fa-pause');
+    playBtn.innerHTML = '||'
 
     track.play();
 }
@@ -48,8 +47,7 @@ function playSong() {
 function pauseSong() {
     track.classList.remove('play');
 
-    playBtn.querySelector('i.fas').classList.add('fa-play');
-    playBtn.querySelector('i.fas').classList.remove('fa-pause');
+    playBtn.innerHTML = '▶'
 
     track.pause();
 }
@@ -84,10 +82,8 @@ function loopTrack() {
 
     if (loopBtn.classList.contains('looped')) {
         loopBtn.classList.remove('looped');
-        document.querySelector('.fa-sync-alt').style.color = 'inherit';
     } else {
         loopBtn.classList.add('looped');
-        document.querySelector('.fa-sync-alt').style.color = '#131313';
     }
     
 }
